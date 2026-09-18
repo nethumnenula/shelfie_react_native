@@ -1,17 +1,21 @@
 import { StyleSheet, Text, View, Image } from "react-native";
+
 import React from "react";
 import { Link } from "expo-router";
 import Logo from "../assets/img/logo_light.png";
 
+// themed component
+import ThemedView from "../components/ThemedView";
+
 const Home = () => {
   return (
-    <View style={styles.container}>
+    <ThemedView style={styles.container}>
       <Image source={Logo} style={styles.img}></Image>
       <Text style={styles.title}>The Number 1</Text>
       <Text style={{ marginTop: 10, marginBottom: 30 }}>Reading List App</Text>
       <Link href="/About" style={styles.link}>About Page</Link>
       <Link href="/Contact" style={styles.link}>Contact Page</Link>
-    </View>
+    </ThemedView>
   );
 };
 
