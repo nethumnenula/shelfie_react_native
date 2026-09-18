@@ -10,7 +10,6 @@ import { Slot, Stack } from "expo-router";
 import { Colors } from "../constants/Colors.js";
 import { StatusBar } from "expo-status-bar";
 
-
 const RootLayout = () => {
   const colorScheme = useColorScheme();
   //console.log(colorScheme)
@@ -20,17 +19,21 @@ const RootLayout = () => {
     <>
       {Platform.OS === "android" && (
         <RNStatusBar
-          translucent={true}
           barStyle={colorScheme === "dark" ? "light-content" : "dark-content"}
           backgroundColor={theme.navBackground}
         />
       )}
-      
+
       <Stack
         screenOptions={{
           headerStyle: { backgroundColor: theme.navBackground },
           headerTintColor: theme.title,
           headerTitleAlign: "center",
+          contentStyle: {
+            backgroundColor: theme.background,
+          },
+          animation: "slide_from_right",
+          animationMatchesGesture: true,
         }}
       >
         <Stack.Screen name="index" options={{ title: "Home" }} />
