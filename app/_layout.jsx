@@ -9,7 +9,7 @@ import {
 import { Slot, Stack } from "expo-router";
 import { Colors } from "../constants/Colors.js";
 import { StatusBar } from "expo-status-bar";
-import React from "react";
+
 
 const RootLayout = () => {
   const colorScheme = useColorScheme();

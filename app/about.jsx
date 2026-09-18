@@ -1,7 +1,7 @@
 import { StyleSheet, Text, useColorScheme, View } from "react-native";
 import { Link } from "expo-router";
 import { Colors } from "../constants/Colors.js";
-import React from "react";
+
 
 const About = () => {
   const colorScheme = useColorScheme();
